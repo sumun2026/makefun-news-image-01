@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  @page { margin: 0 }
+  * { box-sizing: border-box; margin: 0; padding: 0 }
+  html, body { width: 1024px; height: 1024px }
+  body {
+    background: #f1ebdd;
+    color: #17130e;
+    font-family: "Segoe UI", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { position: relative; width: 1024px; height: 1024px; padding: 26px 40px 22px 40px; }
+
+  /* ---------- masthead ---------- */
+  .topline {
+    display: flex; justify-content: space-between; align-items: center;
+    font: 600 9.5px/1 "Segoe UI", Arial, sans-serif;
+    letter-spacing: 2.6px; text-transform: uppercase; color: #6c6355;
+    border-bottom: 1px solid #17130e; padding-bottom: 6px;
+  }
+  .topline .red { color: #b3121e; }
+  .masthead {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700; font-size: 52px; line-height: 1;
+    letter-spacing: 0.5px; text-align: center;
+    margin: 10px 0 8px 0;
+  }
+  .submast {
+    display: flex; justify-content: center; gap: 12px; align-items: center;
+    font: 600 9px/1 "Segoe UI", Arial, sans-serif; letter-spacing: 3.2px;
+    text-transform: uppercase; color: #6c6355; padding-bottom: 7px;
+  }
+  .submast .dot { color: #b3121e; }
+  .rule { height: 3px; background: #17130e; }
+  .rule-thin { height: 1px; background: #17130e; margin-top: 2px; }
+
+  /* ---------- lead ---------- */
+  .lead { display: flex; gap: 22px; padding: 14px 0 0 0; }
+  .lead-left { width: 600px; }
+  .lead-right { width: 322px; border-left: 1px solid #17130e; padding-left: 20px; }
+
+  .kicker {
+    font: 700 10.5px/1 "Segoe UI", Arial, sans-serif; letter-spacing: 2.2px;
+    text-transform: uppercase; color: #b3121e; margin-bottom: 7px;
+  }
+  h2.headline {
+    font-family: Georgia, "Times New Roman", serif; font-weight: 700;
+    font-size: 63px; line-height: 0.97; letter-spacing: -1.2px;
+  }
+  .standfirst {
+    font: 400 15.5px/1.42 "Segoe UI", Arial, sans-serif; color: #241f18;
+    margin: 10px 0 12px 0; max-width: 578px;
+  }
+  .standfirst b { font-weight: 700 }
+  figure { position: relative }
+  figure img { width: 600px; height: 252px; object-fit: cover; display: block;
+               filter: contrast(1.02) sepia(0.05); }
+  .rule-img { height: 1px; background: #17130e; }
+  figcaption {
+    font: 400 10.5px/1.35 "Segoe UI", Arial, sans-serif; color: #6c6355;
+    padding-top: 5px;
+  }
+  figcaption b { color: #17130e; letter-spacing: 0.6px; font-weight: 700; }
+
+  .right-kicker { margin-top: 2px }
+  h3.right-headline {
+    font-family: Georgia, "Times New Roman", serif; font-weight: 700;
+    font-size: 40px; line-height: 0.98; letter-spacing: -0.7px; margin-bottom: 10px;
+  }
+  .right-headline .accent { color: #b3121e }
+  .ship { margin: 4px 0 10px 0 }
+  .body-right { font: 400 13.5px/1.45 "Segoe UI", Arial, sans-serif; color: #241f18 }
+  .body-right + .body-right { margin-top: 8px }
+
+  /* ---------- three ---------- */
+  .three {
+    display: flex; gap: 0; margin-top: 14px; border-top: 3px solid #17130e;
+    padding-top: 12px;
+  }
+  .card { width: 33.33%; padding-right: 18px }
+  .card + .card { border-left: 1px solid #17130e; padding-left: 18px }
+  .card h4 {
+    font-family: Georgia, "Times New Roman", serif; font-weight: 700;
+    font-size: 23px; line-height: 1.02; letter-spacing: -0.3px; margin: 5px 0 6px 0;
+  }
+  .card p { font: 400 11.5px/1.4 "Segoe UI", Arial, sans-serif; color: #35302a }
+
+  /* ---------- day in numbers ---------- */
+  .numbers {
+    position: absolute; left: 40px; right: 40px; bottom: 68px;
+    display: flex; border-top: 1px solid #17130e; border-bottom: 1px solid #17130e;
+    padding: 7px 0 8px 0;
+  }
+  .num { flex: 1; padding: 0 16px }
+  .num:first-child { padding-left: 0 }
+  .num + .num { border-left: 1px solid #cdc3b2 }
+  .num b {
+    display: block; font-family: Georgia, "Times New Roman", serif; font-weight: 700;
+    font-size: 33px; line-height: 1; letter-spacing: -1px;
+  }
+  .num b i { font-style: normal; color: #b3121e }
+  .num span {
+    display: block; margin-top: 4px; font: 600 9px/1.3 "Segoe UI", Arial, sans-serif;
+    letter-spacing: 1.1px; text-transform: uppercase; color: #6c6355;
+  }
+
+  /* ---------- ticker ---------- */
+  .ticker {
+    position: absolute; left: 40px; right: 40px; bottom: 20px;
+    border-top: 1px solid #17130e; padding-top: 7px;
+    font: 400 10.5px/1.5 "Segoe UI", Arial, sans-serif; color: #35302a;
+  }
+  .ticker .tag {
+    font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase;
+    color: #b3121e; font-size: 9.5px; margin-right: 6px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="topline">
+    <span>The world in one frame</span>
+    <span><span class="red">&#9632;</span>&nbsp; Friday, 13 November 2026</span>
+  </div>
+
+  <div class="masthead">13&nbsp;NOVEMBER&nbsp;2026</div>
+  <div class="submast"><span>One day</span><span class="dot">&#9670;</span><span>One page</span><span class="dot">&#9670;</span><span>Nine stories</span></div>
+
+  <div class="rule"></div>
+  <div class="rule-thin"></div>
+
+  <div class="lead">
+    <div class="lead-left">
+      <div class="kicker">Cloud outage &middot; Air travel</div>
+      <h2 class="headline">THE DAY THE<br>SYSTEMS STOPPED</h2>
+      <p class="standfirst">
+        Microsoft&rsquo;s cloud failed across the planet, taking Outlook, Teams and Copilot with it.
+        Hours later a telecom fault forced the FAA to ground <b>every departing flight</b> in the
+        United States &mdash; then let them go again by nightfall.
+      </p>
+      <figure>
+        <div class="rule-img"></div>
+        <img src="assets/lead.png" alt="An airliner waits at a gate at dusk">
+        <div class="rule-img"></div>
+        <figcaption><b>GROUNDED</b> &nbsp;Airports across the US stood still for hours on Friday as the FAA stopped all departures.</figcaption>
+      </figure>
+    </div>
+
+    <aside class="lead-right">
+      <div class="kicker right-kicker">New Orleans</div>
+      <h3 class="right-headline">ALL 129<br>RESCUED<br><span class="accent">ON THE RIVER</span></h3>
+
+      <svg class="ship" width="300" height="108" viewBox="0 0 300 108" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" stroke="#17130e" stroke-width="2">
+          <g transform="rotate(-8 150 62)">
+            <path d="M18 60 H282 L266 84 Q150 92 34 84 Z" fill="#17130e"/>
+            <rect x="52" y="40" width="52" height="20" fill="#f1ebdd"/>
+            <rect x="116" y="34" width="56" height="26" fill="#f1ebdd"/>
+            <rect x="128" y="40" width="8" height="8" fill="#17130e"/>
+            <rect x="146" y="40" width="8" height="8" fill="#17130e"/>
+            <rect x="186" y="42" width="44" height="18" fill="#f1ebdd"/>
+            <rect x="98" y="14" width="12" height="20" fill="#b3121e" stroke="#b3121e"/>
+            <path d="M94 14 H114" stroke="#b3121e" stroke-width="3"/>
+            <circle cx="234" cy="72" r="11" fill="#f1ebdd"/>
+            <path d="M223 72 H245 M234 61 V83" stroke-width="1.6"/>
+          </g>
+          <path d="M6 94 q13 -7 26 0 t26 0 t26 0 t26 0 t26 0 t26 0 t26 0 t26 0 t26 0 t26 0" stroke-width="1.8"/>
+          <path d="M6 102 q13 -7 26 0 t26 0 t26 0 t26 0 t26 0 t26 0 t26 0 t26 0 t26 0 t26 0" stroke="#b3121e" stroke-width="1.8"/>
+        </g>
+      </svg>
+
+      <p class="body-right">
+        A tanker tore into the <i>American Heritage</i>, docked on the Mississippi, and left the
+        paddleboat half sunk. Passengers clung to the railings until rescue boats reached them.
+      </p>
+      <p class="body-right">
+        <b>All 129 aboard</b> were accounted for; 32 went to hospital with non-critical injuries.
+        By midnight, no one was missing.
+      </p>
+      <p class="body-right">
+        New Orleans is calling it a miracle on the Mississippi.
+      </p>
+    </aside>
+  </div>
+
+  <div class="three">
+    <div class="card">
+      <div class="kicker">Moscow &middot; Kyiv</div>
+      <h4>Putin raises the price of peace</h4>
+      <p>The Kremlin adds fresh demands to any settlement as US envoys shuttle between Moscow and Kyiv, and Europe&rsquo;s security returns to the table.</p>
+    </div>
+    <div class="card">
+      <div class="kicker">Yemen &middot; Gulf</div>
+      <h4>A defence pact, and a widening war</h4>
+      <p>Qatar and T&uuml;rkiye pledge joint action against any outside attack while fighting in Yemen drives families from their homes.</p>
+    </div>
+    <div class="card">
+      <div class="kicker">Nvidia &middot; Washington</div>
+      <h4>CEO steps down as scandal spreads</h4>
+      <p>An interim chief inherits the AI giant&rsquo;s risky bets and its legal mess, as the US treasury secretary blames a cabinet colleague.</p>
+    </div>
+  </div>
+
+  <div class="numbers">
+    <div class="num"><b>129</b><span>Aboard the Mississippi paddleboat &mdash; all rescued</span></div>
+    <div class="num"><b>32</b><span>Hospitalised, non-critical injuries</span></div>
+    <div class="num"><b>24</b><span>Killed in a bus crash in north-east India</span></div>
+    <div class="num"><b><i>10</i></b><span>US measles deaths this year as cases pass 5,400</span></div>
+  </div>
+
+  <div class="ticker">
+    <span class="tag">Also on 13 Nov</span>
+    Germany&rsquo;s spies win new powers against hybrid threats &middot; A car bomb in Moscow wounds an aide to Ukraine&rsquo;s fugitive ex-PM
+    &middot; Starship aborts its booster catch &middot; Pope Leo returns home to Chiclayo, Peru &middot; Schumer faces a Senate leadership challenge.
+  </div>
+
+</div>
+</body>
+</html>
